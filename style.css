@@ -31,7 +31,7 @@ html{
     position: sticky;
     top: 0px;
     font-family: 'Baloo Bhai';
-    z-index: 9999999;
+    z-index: 9999999; 
 }
 
 /* Using before Pseudo Selector in navigation bar */
