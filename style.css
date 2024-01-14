@@ -1,0 +1,720 @@
+/* CSS Reset */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root {
+    --navbar-height: 50px;
+}
+
+/* Navigation Bar: Logo and Images */
+.logo {
+    margin: 0px 10px;
+}
+.logo img {
+    height: 50px;
+    margin: 0px 10px;
+}
+
+/* Navigation bar */
+#navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    font-family: 'Baloo Bhai'; 
+    z-index: 9999999;
+}
+/* Using before Pseudo Selector in navigation bar */
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+/* Navigation Bar: List Styling */
+#navbar ul {
+    display: flex;
+}
+#navbar ul li {
+    list-style: none;
+    font-size: 1.1rem;
+}
+#navbar ul li a {
+    color: white;
+    display: block;
+    padding: 3px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+#navbar ul li a:hover {
+
+    color: black;
+    background-color: white;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Login and Signup button in Navigation bar */
+#right-section{
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+.user-account{
+    background-color: transparent;
+    border: 1px solid transparent; 
+} 
+.user-account a{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    padding: 5px 12px; 
+    border-radius: 15px;
+    font-family: 'Baloo Bhai';
+    transition: all 0.4s ease-in-out;
+}
+.user-account a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home section */
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 372px;
+}
+/* Using before Pseudo Selector for navigation bar */
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: url('../images/bg1.jpg') no-repeat center center/cover;
+    height: 431px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+#home h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Laila', serif;
+}
+#home p {
+    color: white;
+    text-align: center;
+    font-size: 1.05rem;
+    font-family: 'Laila', serif;
+}
+#home a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Location section is here */
+#location-section{
+    position: relative; 
+    margin-top: 20px;
+    background-color: #FFFDFA;
+}
+#location-section p{
+    text-align: center;
+    font-family: 'Laila', serif;
+}
+#location{
+    display: flex;
+    height: auto;
+    width: auto;
+    flex-wrap: wrap;
+    margin: 40px 125px;
+}
+.location-item h3{
+    text-align: center;
+}
+.location-item a {
+    color: black;
+    text-decoration: none;
+}
+.location-item{
+    /* border: 1px solid rgb(219, 218, 216); */
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 10px;
+    /* background-color: rgb(224, 218, 218); */
+    height: 30px;
+    width: 205px;
+    cursor: pointer;
+    box-shadow: 30px 0px 20px rgba(0, 0, 0, 0.199);
+}
+
+/* Services section */
+#services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 120px   ;
+}
+#services .box {
+    height: auto;
+    width: 220px;
+    border: 2px solid chocolate;
+    padding: 10px;
+    margin: 5px 5px;
+    border-radius: 10px;
+    background-color: rgb(224, 218, 218);
+}
+#services .box:hover{
+    transition: all 0.3s ease-in-out;
+    box-shadow: 5px 5px 20px rgb(0, 0, 0.190);
+}
+#services .box img {
+    height: 150px;
+    display: block;
+    margin: auto;
+}
+#services .box p {
+    font-size: small;
+    font-family: 'Laila', serif;
+}
+
+/* Clients/Parterns section */
+#partner-section {
+    position: relative;
+    /* height: 233px; */
+}
+#partner-section::before {
+    content: "";
+    position: absolute;
+    background: url('../images/bg2.jpg') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    z-index: -99999;
+    opacity: 0.2;
+}
+#partner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.partner-item {
+    padding: 20px;
+}
+#partner img {
+    height: 120px;
+}
+
+/* Contact Section */
+/* #contact {
+    position: relative;
+} */
+#contact::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    background: url('../images/contact.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+#contact-box input,
+#contact-box textarea {
+    width: 90%;
+    padding: 0.3rem;
+    border-radius: 10px;
+    font-size: 0.80rem;
+    font-family: 'Laila', serif;
+}
+#contact-box form {
+    width: 35%;
+}
+#contact-box label {
+    font-size: 1.1rem;
+    font-family: 'Laila', serif;
+
+}
+
+/* Sign-up and Login Section is here... */
+#signup-box{
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    height: auto;
+    width: 35%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #D2DAFF;
+    box-shadow: 10px 10px 15px rgb(0, 0, 0, 0.199);
+}
+#signup-box .container{
+    display: inline-block;
+    width: 100%;
+}
+.details{
+    padding: 2px 5px;
+}
+#signup-box label{
+    display: flex;
+    font-size: 1rem;
+    font-family: 'Laila', serif;
+}
+.details input{
+    width: 90%;
+    height: 25px;
+    padding: 0px 5px;
+    font-size: 13px;
+    border-radius: 8px;
+    font-family: 'Laila', serif;
+}
+.checkbox{
+    margin: 5px;
+    font-family: 'Laila', serif;
+}
+.checkbox [type="checkbox"]{
+    margin: 5px;
+}
+#signup-box .btn{
+    width: 35%;
+    background-color: rgb(22, 61, 139);
+    margin-left: 110px;
+}
+.details p{
+    text-align: center;
+    font-family: 'Laila', serif;
+}
+#signup-box a{
+    color: blue;
+}
+
+/* Login page section is here */
+#login-box{
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    height: auto;
+    width: 35%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #D2DAFF;
+    box-shadow: 10px 10px 15px rgb(0, 0, 0, 0.199);
+}
+#login-box .container{
+    display: inline-block;
+    width: 100%;
+}
+#login-box label{
+    display: flex;
+    font-size: 1rem;
+    font-family: 'Laila', serif;
+}
+.details input{
+    width: 90%;
+    height: 25px;
+    padding: 0px 5px;
+    font-size: 13px;
+    border-radius: 8px;
+    font-family: 'Laila', serif;
+}
+.checkbox{
+    margin: 5px;
+    font-family: 'Laila', serif;
+}
+.checkbox [type="checkbox"]{
+    margin: 5px;
+}
+#login-box .btn{
+    width: 35%;
+    background-color: rgb(22, 61, 139);
+    margin-left: 110px;
+}
+.details p{
+    text-align: center;
+    font-family: 'Laila', serif;
+}
+.checkbox a{
+    color: blue; 
+}
+#login-box a{
+    color: blue; 
+    font-family: 'Laila', serif;
+}
+
+/* Restaurants Registration page is here */
+#register-restaurants {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 372px;
+}
+/* Using before Pseudo Selector for navigation bar */
+#register-restaurants::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: url('../images/restaurants.jpg') no-repeat center center/cover;
+    height: 431px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+#register-restaurants h1 {
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    font-family: 'Laila', serif;
+}
+#register-restaurants p{
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 1.05rem;
+    font-family: 'Laila', serif;
+}
+#register-restaurants .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#register-restaurants a{
+    text-decoration: none;
+    color: white;
+    padding: 0px 25px;
+}
+
+/* Restaurant Registration documents section is here */
+#registration-docs h1{
+    text-align: center;
+}
+#registration-docs p{
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: 'Laila', serif;
+}
+#documents{
+    display: flex;
+    height: auto;
+    width: 45vw;
+    flex-wrap: wrap;
+    margin: 5px auto;    
+}
+.documents-item h3{
+    text-align: center;
+}
+.documents-item a {
+    color: black;
+    text-decoration: none; 
+}
+.documents-item{
+    /* border: 1px solid rgb(219, 218, 216); */
+    padding: 5px;
+    margin: 5px auto;
+    border-radius: 10px;
+    height: 30px;
+    width: 215px;
+    cursor: pointer;
+    box-shadow: 30px 0px 20px rgba(0, 0, 0, 0.199);
+}
+.documents-item img{
+    padding: 0px;
+    margin: -4px auto;
+    height: 20px;
+    width: 20px;
+}
+
+/* Restaurant Registration form section is here */
+#registration-form .form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Laila', serif;
+}
+
+#registration-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+#registration-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#registration-form input,
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Laila', serif;
+}
+
+#registration-form input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+}
+
+#registration-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#registration-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Footer Section */
+.container {
+    width: 1000px;
+    margin: 0px auto;
+}
+
+.row {
+    display: flex;
+}
+
+.col-md-6,
+.col-sm-6 {
+    width: 50%;
+}
+
+.col-md-3 {
+    width: 25%;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+
+.site-footer {
+    background-color: #26272b;
+    padding: 45px 0 20px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #737373;
+    font-family: 'Laila', serif;
+}
+
+.site-footer hr {
+    border-top-color: #bbb;
+    opacity: 0.5
+}
+
+.site-footer hr.small {
+    margin: 20px 0px;
+}
+
+.site-footer h6 {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+.site-footer a {
+    color: #737373;
+}
+
+.site-footer a:hover {
+    color: #3366cc;
+    text-decoration: none;
+}
+
+.footer-links {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer-links li {
+    display: block
+}
+
+.footer-links a {
+    color: #737373
+}
+
+.footer-links a:active,
+.footer-links a:focus,
+.footer-links a:hover {
+    color: #3366cc;
+    text-decoration: none;
+}
+
+.footer-links.inline li {
+    display: inline-block
+}
+
+.site-footer .social-icons {
+    text-align: right
+}
+
+.site-footer .social-icons a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 10px; 
+    margin-top: 15px; 
+    margin-right: 0;
+    border-radius: 100%;
+    background-color: #33353d
+}
+
+.copyright-text {
+    margin: 0
+}
+
+@media (max-width:991px) {
+    .site-footer [class^=col-] {
+        margin-bottom: 30px
+    }
+}
+
+@media (max-width:767px) {
+    .site-footer {
+        padding-bottom: 0
+    }
+
+    .site-footer .copyright-text,
+    .site-footer .social-icons {
+        text-align: center
+    }
+}
+
+.social-icons {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-bottom: 4px
+}
+
+.social-icons li.title {
+    margin-right: 15px;
+    text-transform: uppercase;
+    color: #96a2b2;
+    font-weight: 700;
+    font-size: 13px
+}
+
+.social-icons a {
+    background-color: #eceeef;
+    color: #818a91;
+    font-size: 16px;
+    display: inline-block;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100%;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear
+}
+
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a:hover {
+    color: #fff;
+    background-color: #29aafe
+}
+
+.social-icons.size-sm a {
+    line-height: 34px;
+    height: 34px;
+    width: 34px;
+    font-size: 14px
+}
+
+.social-icons a.facebook:hover {
+    background-color: #3b5998
+}
+
+.social-icons a.twitter:hover {
+    background-color: #00aced
+}
+
+.social-icons a.linkedin:hover {
+    background-color: #007bb6
+}
+
+.social-icons a.dribbble:hover {
+    background-color: #ea4c89
+}
+
+@media (max-width:767px) {
+    .social-icons li.title {
+        display: block;
+        margin-right: 0;
+        font-weight: 600
+    }
+}
+
+
+/* Utility classes */
+.h1-primary {
+    font-size: 2rem;
+    padding: 5px;
+    font-family: 'Laila', serif;
+}
+
+.h2-secondry {
+    font-size: 1.13rem;
+    padding: 5px;
+    font-family: 'Laila', serif;
+}
+
+.h3-secondry {
+    font-size: 16px;
+    padding: 5px;
+    font-family: 'Laila', serif;
+}
+
+.btn {
+    color: white;
+    background-color: rgb(207, 20, 20);
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 3px 6px;
+    margin: 10px;
+    font-size: 1.1rem;
+    font-family: 'Laila', serif;
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}

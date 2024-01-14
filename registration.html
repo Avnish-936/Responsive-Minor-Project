@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Restaurants</title>
+    <!-- CSS property -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1001px)" href="phone.css">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Laila&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Laila:wght@700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Baloo Bhai' rel='stylesheet'>
+
+</head>
+<body>
+    <!-- Navigaiton bar is here -->
+    <nav id="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="MyFoodStore">
+        </div>
+        <ul>
+            <li class="item avtive"><a href="index.html">Home</a></li>
+            <li class="item"><a href="index.html#location-section">Restaurants</a></li>
+            <li class="item"><a href="index.html#partner-section">Our Partners</a></li>
+            <li class="item"><a href="services.html">Services</a></li>
+            <li class="item"><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div id="right-section">
+            <button class="user-account"><a href="Login.html">Log in</a></button>
+            <button class="user-account"><a href="Sign_up.html">Sign up</a></button>
+        </div>
+    </nav>
+
+    <!-- Restaurent Registration page is here -->
+    <section id="register-restaurants">
+        <h1 class="h1-primary">Register Your Restaurants</h1>
+        <p>Let's register your restaurants and start online selling with 0% commission for 3 months.</p>
+        <p>Need help? Please email us at support@MyFoodStore.com</p>
+        <div class="container">
+            <button class="btn"><a href="#registration-docs">Register your restaurant</a></button>
+            <button class="btn"><a href="Login.html">Login to view your existing restaurant</a></button>
+        </div>
+    </section>
+
+    <section id="registration-docs">
+        <h1 class="h1-primary">Get start your restaurant with online services</h1>
+        <p>Before registration, Please keep these documents for smooth experience.</p>
+        <div id="documents">
+            <div class="documents-item">
+                <a href="#"><h3 class="h3-secondry center"><img src="images/green-check.png" alt=""> FSSAI license copy</h3></a>
+            </div>
+            <div class="documents-item">
+                <a href="#"><h3 class="h3-secondry center"><img src="images/green-check.png" alt=""> Regular GSTIN copy</h3></a>
+            </div>
+            <div class="documents-item">
+                <a href="#"><h3 class="h3-secondry center"><img src="images/green-check.png" alt=""> Aadhar card copy</h3></a>
+            </div>
+            <div class="documents-item">
+                <a href="#"><h3 class="h3-secondry center"><img src="images/green-check.png" alt=""> Pan card copy</h3></a>
+            </div>
+            <div class="documents-item">
+                <a href="#"><h3 class="h3-secondry center"><img src="images/green-check.png" alt=""> Bank account details</h3></a>    
+            </div>
+            <div class="documents-item">
+                <a href="#"><h3 class="h3-secondry center"><img src="images/green-check.png" alt=""> Restaurants details</h3></a>
+            </div>
+            <div class="documents-item">
+                <a href="#"><h3 class="h3-secondry center"><img src="images/green-check.png" alt=""> Your restaurant menu</h3></a>
+            </div>
+            <div class="documents-item">
+                <a href="#"><h3 class="h3-secondry center"><img src="images/green-check.png" alt=""> Best 5 Dishes images</h3></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="registration-form">
+        <div class="form-container">
+            <h1>Restaurant Registration Form</h1>
+            <form action="#" method="post" id="registrationForm">
+                
+                <label for="restaurantName">Restaurant Name:</label>
+                <input type="text" id="restaurantName" name="restaurantName" required>
+    
+                <label for="ownerName">Owner Name:</label>
+                <input type="text" id="ownerName" name="ownerName" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="account">Account Number:</label>
+                <input type="number" id="account" name="account" required>
+                
+                <label for="ifsc">IFSC Code:</label>
+                <input type="text" id="ifsc" name="ifsc" required>
+    
+                <label for="fssaiLicense">FSSAI License Copy:</label>
+                <input type="file" id="fssaiLicense" name="fssaiLicense" accept=".pdf, .jpg, .jpeg, .png">
+                
+                <label for="gstinCopy">GSTIN Copy:</label>
+                <input type="file" id="gstinCopy" name="gstinCopy" accept=".pdf, .jpg, .jpeg, .png">
+                
+                <label for="aadharCopy">Aadhar Card Copy:</label>
+                <input type="file" id="aadharCopy" name="aadharCopy" accept=".pdf, .jpg, .jpeg, .png">
+                
+                <label for="panCopy">PAN Card Copy:</label>
+                <input type="file" id="panCopy" name="panCopy" accept=".pdf, .jpg, .jpeg, .png"> 
+                
+                <label for="menuCard">Restaurant Menu:</label>
+                <input type="file" id="menu" name="menu" accept=".pdf, .jpg, .jpeg, .png"> 
+                
+                <label for="bestDishes">Best Dishes:</label>
+                <textarea id="bestDishes" name="bestDishes" rows="4" required></textarea>
+                
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </section>
+
+    <!-- Site footer page is here -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class=" col-md-6">
+                    <h6>About</h6>
+                    <p style="padding-right:20px;text-align:justify">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five
+                    </p>
+                </div>
+
+                <div class=" col-md-3">
+                    <h6>Categories</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Paneer-Pizza</a></li>
+                        <li><a href="#">Snacks Burger</a></li>
+                        <li><a href="#">Deserts</a></li>
+                        <li><a href="#">Healthy Diets</a></li>
+                        <li><a href="#">Energy Drinks</a></li>
+                        <li><a href="#">All Sweets</a></li>
+                    </ul>
+                </div>
+
+                <div class=" col-md-3">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Contribute</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class=" col-sm-6 ">
+                    <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by
+                        <a href="#">MyFoodStore</a>.
+                    </p>
+                </div>
+
+                <div class=" col-sm-6 ">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="https://www.facebook.com/" target="_blank">f</a></li>
+                        <li><a class="twitter" href="https://twitter.com/" target="_blank">t</a></li>
+                        <li><a class="linkedin" href="https://in.linkedin.com/" target="_blank">in</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
